@@ -1,13 +1,75 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #EFFBFA;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.quote {
+  position: relative;
+}
+
+blockquote {
+  font-family: Arial, sans-serif;
+  max-width: 720px;
+  font-weight: 3rem;
+  background-color: #90E0DA;
+  color: #1A1E23;
+  padding: 3rem;
+  border-radius: .5rem;
+}
+
+.anime,
+.character {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #F75590;
+  color: white;
+  border-radius: .5rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.anime {
+  font-weight: 400;
+  transform: translate(25%, 50%);
+}
+
+.character {
+  font-weight: 700;
+  transform: translate(-25%, 50%);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: #C3094D;
+  color: white;
+  border-radius: .5rem;
+  padding: 0.75rem;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  transition: 0.4s;
+  cursor: pointer;
+  font-size: 1.15rem;
+}
+button:hover {
+  background-color: #610527;
 }
